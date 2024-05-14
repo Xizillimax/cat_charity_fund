@@ -4,15 +4,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.crud.charity_project import charity_project_crud
 from app.models.charity_project import CharityProject
 
-MESSAGE_NOT_NONE = 'Поле обязательное!'
-MESSAGE_EXIST_NAME = 'Проект с таким именем уже существует!'
-MESSAGE_NOT_PROJECT = 'Данного проекта нет!'
-MESSAGE_HAVE_MONEY = 'Нельзя удалить проект с деньгами!'
-MESSAGE_DELETE_CLOSED_PROJECT = 'Нельзя удалить закрытый проект!'
-MESSAGE_PATCH_CLOSED_PROJECT = 'Нельзя редактировать закрытый проект!'
+MESSAGE_NOT_NONE = 'Поле обязательное'
+MESSAGE_EXIST_NAME = 'Проект с таким именем уже существует'
+MESSAGE_NOT_PROJECT = 'Данного проекта нет'
+MESSAGE_HAVE_MONEY = 'Нельзя удалить проект с деньгами'
+MESSAGE_DELETE_CLOSED_PROJECT = 'Нельзя удалить закрытый проект'
+MESSAGE_PATCH_CLOSED_PROJECT = 'Нельзя редактировать закрытый проект'
 MESSAGE_PATCH_NOT_EMPTY_PROJECT = (
     'Нельзя При редактировании проекта '
-    'устанавливать требуемую сумму меньше внесённой.')
+    'устанавливать требуемую сумму меньше внесённой')
 
 
 async def check_info_none(

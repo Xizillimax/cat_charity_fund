@@ -46,4 +46,5 @@ async def func_donation(
     await session.commit()
     await session.refresh(project)
     await session.refresh(donation)
+    await func_donation(session, object)
     return object

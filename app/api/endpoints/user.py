@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException, status
 from app.core.user import auth_backend, fastapi_users
 from app.schemas.user import UserCreate, UserRead, UserUpdate
 
-MESSAGE_ERROR = "Удаление пользователей запрещено!"
+MESSAGE_ERROR = 'Удаление пользователей запрещено'
 
 
 router = APIRouter()

@@ -132,3 +132,7 @@ dmypy.json
 .idea
 
 *.db
+*.json
+pytest.ini
+/tests
+/postman_collection
