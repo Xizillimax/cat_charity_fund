@@ -17,6 +17,7 @@ from app.models.user import User
 from app.schemas.user import UserCreate
 
 MIN_LEN_PASSWORD = 3
+LIFETIME_OF_THE_TOKEN = 3600
 
 MESSAGE_PASSWORD_LITTLE = 'Длина пароля должна быть больше 3'
 MESSAGE_PASSWORD_NOT_EMAIL = 'Пароль не должен совпадать с почтой'
@@ -31,7 +32,10 @@ bearer_transport = BearerTransport(tokenUrl='auth/jwt/login')
 
 
 def get_jwt_strategy() -> JWTStrategy:
-    return JWTStrategy(secret=settings.secret, lifetime_seconds=3600)
+    return JWTStrategy(
+        secret=settings.secret,
+        lifetime_seconds=LIFETIME_OF_THE_TOKEN
+    )
 
 
 auth_backend = AuthenticationBackend(

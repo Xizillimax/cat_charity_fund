@@ -136,3 +136,4 @@ dmypy.json
 pytest.ini
 /tests
 /postman_collection
+setup_for_postman.py
